@@ -1,0 +1,8 @@
+prefix=/home/marcusn/catkin_ws/install
+
+Name: cv_pipeline
+Description: Description of cv_pipeline
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime

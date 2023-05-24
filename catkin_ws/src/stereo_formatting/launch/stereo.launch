@@ -1,0 +1,12 @@
+<launch>
+
+<arg name="my_ns" default="stereo" />
+<arg name="my_name" default="synchronizer" />
+
+<include file="$(find raspicam_node)/launch/410x308_custom.launch"/>
+
+<node ns="$(arg my_ns)" name="$(arg my_name)" pkg="stereo_formatting" type="synchronizer" />
+
+<node name="car_control" pkg="rosserial_python" type="serial_node.py" args="/dev/ttyACM0" />
+
+</launch>
